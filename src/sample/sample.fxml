@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+
+<?import javafx.scene.text.Text?>
+<Pane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="940.0"
+      prefWidth="1100.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Fifteen">
+    <children>
+        <Text fx:id="text" layoutX="360.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0"/>
+        <Button fx:id="buttonMove" layoutX="342.0" layoutY="145.0" mnemonicParsing="false" text="Button" />
+        <ImageView fx:id="gridBack" fitHeight="800.0" fitWidth="800.0" layoutX="20.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="im00" fitHeight="200.0" fitWidth="200.0" layoutX="20.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="im01" fitHeight="200.0" fitWidth="200.0" layoutX="220.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="im02" fitHeight="200.0" fitWidth="200.0" layoutX="420.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="im03" fitHeight="200.0" fitWidth="200.0" layoutX="620.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="im10" fitHeight="200.0" fitWidth="200.0" layoutX="20.0" layoutY="320.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="im11" fitHeight="200.0" fitWidth="200.0" layoutX="220.0" layoutY="320.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="im12" fitHeight="200.0" fitWidth="200.0" layoutX="420.0" layoutY="320.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="im13" fitHeight="200.0" fitWidth="200.0" layoutX="620.0" layoutY="320.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="im20" fitHeight="200.0" fitWidth="200.0" layoutX="20.0" layoutY="520.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="im21" fitHeight="200.0" fitWidth="200.0" layoutX="220.0" layoutY="520.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="im22" fitHeight="200.0" fitWidth="200.0" layoutX="420.0" layoutY="520.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="im23" fitHeight="200.0" fitWidth="200.0" layoutX="620.0" layoutY="520.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="im30" fitHeight="200.0" fitWidth="200.0" layoutX="20.0" layoutY="720.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="im31" fitHeight="200.0" fitWidth="200.0" layoutX="220.0" layoutY="720.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="im32" fitHeight="200.0" fitWidth="200.0" layoutX="420.0" layoutY="720.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="im33" fitHeight="200.0" fitWidth="200.0" layoutX="620.0" layoutY="720.0" pickOnBounds="true" preserveRatio="true" />
+        <MenuBar layoutY="-1.0" prefHeight="26.0" prefWidth="1100.0">
+            <Menu mnemonicParsing="false" text="Start game">
+                <MenuItem mnemonicParsing="false" onAction="#startRandomGame" text="Random"/>
+                <MenuItem mnemonicParsing="false" onAction="#selectUser" text="Input user's values"/>
+                <MenuItem mnemonicParsing="false" onAction="#startUsersPosition" text="Start user's position"/>
+                <MenuItem mnemonicParsing="false" onAction="#help" text="Help"/>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Bot (auto)">
+                <MenuItem mnemonicParsing="false" onAction="#start01" text="0.1 sec"/>
+                <MenuItem mnemonicParsing="false" onAction="#start02" text="0.2 sec"/>
+                <MenuItem mnemonicParsing="false" onAction="#start04" text="0.4 sec"/>
+                <MenuItem mnemonicParsing="false" onAction="#start1" text="1 sec"/>
+                <MenuItem mnemonicParsing="false" onAction="#next" text="Next   (press Q)"/>
+            </Menu>
+        </MenuBar>
+
+    </children>
+</Pane>

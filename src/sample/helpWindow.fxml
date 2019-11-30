@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<Pane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+      prefWidth="370.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.HelpWindow">
+    <children>
+        <Text fx:id="text1" layoutX="48.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Игра Пятнашки."/>
+        <Text fx:id="text2" layoutX="48.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Цель игры: собрать поле таким образом, чтобы плитки расположились"/>
+        <Text fx:id="text3" layoutX="48.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="по порядку от 1 до 15."/>
+        <Text fx:id="text4" layoutX="48.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Играть можно самому, используя клавиши ВВЕРХ, ВНИЗ, ВЛЕВО, ВПРАВО"/>
+        <Text fx:id="text5" layoutX="48.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="или же получить автоматическое решение."/>
+    </children>
+</Pane>
