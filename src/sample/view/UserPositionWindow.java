@@ -1,4 +1,4 @@
-package sample;
+package sample.view;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -14,22 +14,22 @@ import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
 
-import static sample.Field.f1;
-import static sample.Field.f2;
-import static sample.Field.f3;
-import static sample.Field.f4;
-import static sample.Field.f5;
-import static sample.Field.f6;
-import static sample.Field.f7;
-import static sample.Field.f8;
-import static sample.Field.f9;
-import static sample.Field.f10;
-import static sample.Field.f11;
-import static sample.Field.f12;
-import static sample.Field.f13;
-import static sample.Field.f14;
-import static sample.Field.f15;
-import static sample.Field.f16;
+import static sample.logic.Field.f1;
+import static sample.logic.Field.f2;
+import static sample.logic.Field.f3;
+import static sample.logic.Field.f4;
+import static sample.logic.Field.f5;
+import static sample.logic.Field.f6;
+import static sample.logic.Field.f7;
+import static sample.logic.Field.f8;
+import static sample.logic.Field.f9;
+import static sample.logic.Field.f10;
+import static sample.logic.Field.f11;
+import static sample.logic.Field.f12;
+import static sample.logic.Field.f13;
+import static sample.logic.Field.f14;
+import static sample.logic.Field.f15;
+import static sample.logic.Field.f16;
 
 public class UserPositionWindow {
     private static boolean checkingSymbolsOK;
@@ -90,7 +90,7 @@ public class UserPositionWindow {
         if (checkingSymbolsOK && checking_is_ok) {
             Stage window = (Stage) okButton.getScene().getWindow();
             window.close();
-            Fifteen.userPositionWindowIsOpened = false;
+            MainWindow.userPositionWindowIsOpened = false;
             rewriteFile();
         } else {
             if (!checkingSymbolsOK) text.setText("Введите правильные значения");

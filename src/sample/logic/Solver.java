@@ -1,16 +1,18 @@
-package sample;
+package sample.logic;
+
+import sample.view.MainWindow;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import static java.lang.Math.abs;
 
-class Solver {
+public class Solver {
 
     private Game game;
-    Solver(Game game) {
+    public Solver(Game game) {
         this.game = game;
-        Fifteen.isTextNull = false;
+        MainWindow.isTextNull = false;
     }
 
     private static int[][] winfield = {{1, 5, 9, 13}, {2, 6, 10, 14}, {3, 7, 11, 15}, {4, 8, 12, 0}};
@@ -37,9 +39,9 @@ class Solver {
     private int countWhiles;
     private int openedSize;
     private int closedSize;
-    int countBotMoves = 0;
+    public int countBotMoves = 0;
 
-    void botFindPath() {
+    public void botFindPath() {
         opened = new ArrayList<>();
         heuristicOfOpened = new ArrayList<>();
         closed = new ArrayList<>();
@@ -76,7 +78,7 @@ class Solver {
                     else size = intArrayClosedSize.get(size - 1);
                 }
                 System.out.println("PathSize = " + path.size());
-                Fifteen.win = true;
+                MainWindow.win = true;
                 for (int j = 1; j < path.size(); j++) {
                     pathReversed.add(path.get(path.size() - j - 1));
                 }
@@ -114,7 +116,7 @@ class Solver {
             }
 
             //add closed
-            int[][] fieldPosition = new int[4][4]; ///////////////////////////////
+            int[][] fieldPosition = new int[4][4];
             for (int j = 0; j < 4; j++) {
                 for (int i = 0; i < 4; i++) {
                     fieldPosition[i][j] = Game.field.field[i][j];
@@ -152,7 +154,7 @@ class Solver {
         }
     }
 
-    void next() {
+    public void next() {
         countBotMoves = 0;
         botFindPath();
         back();
@@ -203,7 +205,7 @@ class Solver {
         }
     }
 
-    void makeOneBotMove() {
+    public void makeOneBotMove() {
         if (pathReversed.size() > countBotMoves) Game.field.field = pathReversed.get(countBotMoves);
         countBotMoves++;
         for (int j = 0; j < 4; j++) {
@@ -215,7 +217,7 @@ class Solver {
             }
         }
         game.checkWin();
-        if (Fifteen.win) {
+        if (MainWindow.win) {
             for (int j = 0; j < 4; j++) {
                 for (int i = 0; i < 4; i++) {
                     Game.field.field[i][j] = winfield[i][j];
@@ -226,7 +228,7 @@ class Solver {
         }
     }
 
-    void back() {
+    public void back() {
         for (int j = 0; j < 4; j++) {
             for (int i = 0; i < 4; i++) {
                 Game.field.field[i][j] = fieldBeforeBot.field[i][j];

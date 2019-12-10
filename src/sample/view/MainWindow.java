@@ -1,4 +1,4 @@
-package sample;
+package sample.view;
 
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -12,12 +12,14 @@ import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import sample.logic.Game;
+import sample.logic.Solver;
 
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class Fifteen {
+public class MainWindow {
     private Image image1 = new Image("sample/images/num1.jpg");
     private Image image2 = new Image("sample/images/num2.jpg");
     private Image image3 = new Image("sample/images/num3.jpg");
@@ -35,12 +37,12 @@ public class Fifteen {
     private Image image15 = new Image("sample/images/num15.jpg");
 
     private Game game = new Game();
-    static boolean isTextNull = false;
-    static boolean gameIsUser = false;
-    static boolean win = false;
+    public static boolean isTextNull = false;
+    public static boolean gameIsUser = false;
+    public static boolean win = false;
     static boolean userPositionWindowIsOpened = false;
     private static boolean helpWindowOpened = false;
-    static boolean processIntervalBot = false;
+    public static boolean processIntervalBot = false;
 
     @FXML
     Button buttonMove;

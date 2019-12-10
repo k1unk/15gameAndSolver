@@ -1,22 +1,24 @@
 package test;
 
-import sample.Field;
-import sample.UserPositionWindow;
+import sample.logic.Field;
+import sample.view.UserPositionWindow;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static sample.Field.*;
-import static sample.Field.f16;
+import static sample.logic.Field.*;
+import static sample.logic.Field.f16;
 
 class Test {
 
-    private Field field = new sample.Field();
+    //проверка на то, является ли стартовое поле решаемым
+    private Field field = new Field();
     @org.junit.jupiter.api.Test
     void startRandomPositionTest() {
         field.fill();
-        field.check();
+        field.checkWinnable();
         assertTrue(field.checking_is_ok);
     }
 
+    //Показывает, что поле, заданное пользователем является решаемым
     private UserPositionWindow userPositionWindow = new UserPositionWindow();
     @org.junit.jupiter.api.Test
     void startUsersPositionTestTrue() {
@@ -57,6 +59,7 @@ class Test {
         assertTrue(userPositionWindow.checking_is_ok);
     }
 
+    //Показывает, что поле, заданное пользователем не является решаемым
     @org.junit.jupiter.api.Test
     void startUsersPositionTestFalse() {
         String t1 = "2";
@@ -97,6 +100,7 @@ class Test {
         assertFalse(userPositionWindow.checking_is_ok);
     }
 
+    //Показывает, что поле, заданное пользователем имеет неверные входные значения
     @org.junit.jupiter.api.Test
     void wrongValues() {
         String t1 = "2qqqqqq";

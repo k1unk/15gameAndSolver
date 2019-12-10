@@ -1,16 +1,17 @@
-package sample;
+package sample.logic;
 
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
+import sample.view.MainWindow;
 
-class Game {
-    static Field field;
+public class Game {
+    public static Field field;
 
-    Game() {
+    public Game() {
         field = new Field();
     }
 
-    void keyPressed(KeyEvent keyEvent, Game game) {
+    public void keyPressed(KeyEvent keyEvent, Game game) {
 
         if (keyEvent.getCode().getName().equals("D") || keyEvent.getCode().equals(KeyCode.RIGHT)) {
             if (field.zeroX != 0) {
@@ -37,9 +38,9 @@ class Game {
             }
         }
         if (keyEvent.getCode().equals(KeyCode.SPACE)) {
-            if (Fifteen.processIntervalBot) {
-                Fifteen.processIntervalBot = false;
-                Fifteen.isTextNull = true;
+            if (MainWindow.processIntervalBot) {
+                MainWindow.processIntervalBot = false;
+                MainWindow.isTextNull = true;
             }
         }
         if (keyEvent.getCode().getName().equals("Q")) {
@@ -81,7 +82,7 @@ class Game {
                 if (winfield[i][j] == field.field[i][j]) counter++;
             }
         }
-        Fifteen.win = counter == 16;
+        MainWindow.win = counter == 16;
     }
 
 }

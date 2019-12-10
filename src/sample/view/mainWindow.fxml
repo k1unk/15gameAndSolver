@@ -9,7 +9,7 @@
 
 <?import javafx.scene.text.Text?>
 <Pane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="940.0"
-      prefWidth="1100.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Fifteen">
+      prefWidth="1100.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.view.MainWindow">
     <children>
         <Text fx:id="text" layoutX="360.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0"/>
         <Button fx:id="buttonMove" layoutX="342.0" layoutY="145.0" mnemonicParsing="false" text="Button" />
